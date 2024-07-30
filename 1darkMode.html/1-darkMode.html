@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 100vh;
+            font-size: 20px;
+            font-weight: bolder;
+            width: 90%;
+            overflow: hidden auto;
+            border: 1px solid;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            background-image: url("./light.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* filter: blur(0.2); */
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./light.jpg); */
+        }
+
+        select {
+            height: 20px;
+            width: 80px;
+            border-radius: 10px;
+            align-self: flex-end;
+            margin: 10px 20px;
+            box-shadow: 10px 5px 10px grey;
+            border: none;
+            outline: none;
+        }
+
+        /* select:hover{
+        height: 50px;
+        font-size: 20px;
+        width: 90px;
+        border-radius: 10px ;
+       } */
+        h1 {
+            align-self: center;
+            /* filter: drop-shadow(5px 5px 1px rgb(202, 199, 199)); */
+            backdrop-filter: blur(15px);
+            background: rgba(200 200 200 0.3);
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        #para {
+            margin: 0px 50px 50px 50px;
+            backdrop-filter: blur(15px);
+            background: rgba(200 200 200 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <select name=" " id="mode1" onchange="getChange()">
+            <option value="" selected disabled> mode</option>
+            <option value="lightMode">ligthMode</option>
+            <option value="DarkMode">DarkMode</option>
+        </select>
+        <h1>Nature</h1>
+        <div id="para">
+            <p>Nature is the creation of natural material and physical world on earth independent of the human
+                activities. The beauty and richness of nature is diverse and massive. Nature provides us with several
+                delicacies to enjoy and is our life support system. Our basic needs like food, shelter, water and air
+                are all the gifts from nature. Humans have a strong connection and interrelation with nature. Escaping
+                away in the nature heals the mind and body and soothes our soul. Irrespective of what nature provides us
+                it is also our moral and social responsibility to nurture nature.
+                Nature is that natural and physical world that surrounds us and makes life possible on earth. Nature is
+                the heart of earth. Nature heals us and helps build connection with our freedom, authenticity and our
+                souls. Simply connecting and feeling nature gives us a divine pleasure. We have a strong bond and
+                emotional connection with nature.
+
+                The serenity of nature calms our hearts. The stillness and movement in nature both have a hypnotizing
+                effect. The unfolding creativity of nature is an art. It is alluring to experience solitude with nature.
+                The practice of devoting ourselves to the bliss of nature is soothing and reviving. Everyone loves to
+                escape away in the mysteries of nature.</p>
+        </div>
+    </div>
+
+    <script>
+        let mode = document.getElementById("mode1");
+        let box1 = document.getElementById("box");
+        function getChange() {
+            if (mode.value == "lightMode") {
+                //  box1.style.backgroundColor="white";
+                box1.style.color = "black";
+                box1.style.backgroundImage = "url('./light.jpg')"
+            }
+            else if (mode.value == "DarkMode") {
+                //  box1.style.backgroundColor="Black";
+                box1.style.color = "antiquewhite";
+                mode1.style.border = "none"
+                box1.style.backgroundImage = "url('./dark.jpg  ')"
+                //  alert("you are in dark mode")
+            }
+        }
+    </script>
+</body>
+
+</html>
